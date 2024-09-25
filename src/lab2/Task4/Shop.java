@@ -1,7 +1,7 @@
-package lab2;
+package lab2.Task4;
 
+import lab2.Task4.Exceptions.CantDeleteException;
 import lab2.Utils;
-import lab2.CantDeleteException;
 
 public class Shop {
     private String[] computers = new String[4];

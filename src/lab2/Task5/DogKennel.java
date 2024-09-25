@@ -1,6 +1,4 @@
-package lab2;
-
-import lab2.Dog;
+package lab2.Task5;
 
 import java.util.ArrayList;
 
