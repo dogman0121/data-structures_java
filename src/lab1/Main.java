@@ -3,6 +3,10 @@ package lab1;
 import java.util.Scanner;
 
 public class Main {
+    public static void main(String[] args) {
+        new Main().solve3(args);
+    }
+
     public void solve1() {
         int[] a = new Main().generateRandomArray(10, 0, 10);
         System.out.println("Исходный массив:");
@@ -46,7 +50,7 @@ public class Main {
         double x;
         for(int i = 1; i <= 10; i++){
             x = 1.0/i;
-            System.out.printf("%f\n", x);
+            System.out.printf("%.5f\n", x);
         }
     }
 
