@@ -1,4 +1,4 @@
-package lab5.Task1;
+package lab5;
 
 public class MatchTester {
     public static void main(String[] args) {
