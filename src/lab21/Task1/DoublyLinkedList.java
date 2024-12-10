@@ -1,8 +1,21 @@
-package lab17;
+package lab21.Task1;
 
-public class DoubleLinkedList {
+class DoublyLinkedList {
     private Node head; // Голова списка
     private Node tail; // Хвост списка
+
+    class Node {
+        String data;      // Строка
+        Node prev;        // Ссылка на предыдущий узел
+        Node next;        // Ссылка на следующий узел
+
+        // Конструктор узла
+        Node(String data) {
+            this.data = data;
+            this.prev = null;
+            this.next = null;
+        }
+    }
 
     // Вставка строки с сохранением порядка
     public void insert(String str) {
@@ -16,8 +29,8 @@ public class DoubleLinkedList {
 
         Node current = head;
 
-        // Найти место для вставки
-        while (current != null && compare(current.data, str)) {
+        // Найти позицию для вставки
+        while (current != null && shouldInsertAfter(current.data, str)) {
             current = current.next;
         }
 
@@ -38,12 +51,12 @@ public class DoubleLinkedList {
         }
     }
 
-    // Сравнение строк: сначала по длине, потом по алфавиту
-    private boolean compare(String a, String b) {
-        if (a.length() != b.length()) {
-            return a.length() < b.length();
+    // Логика сравнения: нужно ли вставить новый элемент ПОСЛЕ текущего
+    private boolean shouldInsertAfter(String existing, String newStr) {
+        if (existing.length() != newStr.length()) {
+            return existing.length() < newStr.length();
         }
-        return a.compareTo(b) < 0;
+        return existing.compareTo(newStr) < 0;
     }
 
     // Просмотр списка

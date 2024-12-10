@@ -1,8 +1,8 @@
-package lab17;
+package lab21.Task1;
 
-public class DDLTester {
+public class DLLTester {
     public static void main(String[] args) {
-        DoubleLinkedList list = new DoubleLinkedList();
+        DoublyLinkedList list = new DoublyLinkedList();
 
         // Вставка строк
         list.insert("apple");
